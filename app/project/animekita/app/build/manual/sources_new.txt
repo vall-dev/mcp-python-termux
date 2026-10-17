@@ -1,0 +1,14 @@
+src/main/java/com/animekita/adapter/AnimeAdapter.java
+src/main/java/com/animekita/adapter/EpisodeAdapter.java
+src/main/java/com/animekita/model/Anime.java
+src/main/java/com/animekita/model/HomeResponse.java
+src/main/java/com/animekita/model/Episode.java
+src/main/java/com/animekita/network/ApiClient.java
+src/main/java/com/animekita/network/Scraper.java
+src/main/java/com/animekita/AnimeFirebaseMessagingService.java
+src/main/java/com/animekita/DetailActivity.java
+src/main/java/com/animekita/MainActivity.java
+src/main/java/com/animekita/NotificationHelper.java
+src/main/java/com/animekita/PlayerActivity.java
+src/main/java/com/animekita/SearchActivity.java
+src/main/java/com/animekita/SubscriberManager.java

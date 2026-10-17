@@ -1,0 +1,10 @@
+[
+  {
+    "id": "release",
+    "name": "release",
+    "file": "/storage/emulated/0/Android/data/com.tyron.code/files/codeassist/keystores/release.jks",
+    "storePass": "release",
+    "keyAlias": "key0",
+    "keyPass": "release"
+  }
+]

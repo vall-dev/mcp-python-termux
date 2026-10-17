@@ -1,0 +1,458 @@
+<style type="text/css">
+  .title-angka {
+    font-size: 12px !important;
+}
+.title-angka img {
+    max-width: 32px !important;
+}
+</style>
+
+<!-- PRODUCTION -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <link rel="shortcut icon" href="https://trustpositif.komdigi.go.id/assets/images/image2_ouC_icon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://trustpositif.komdigi.go.id/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://trustpositif.komdigi.go.id/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="https://trustpositif.komdigi.go.id/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://trustpositif.komdigi.go.id/assets/css/style.css">
+    <link rel="stylesheet" href="https://trustpositif.komdigi.go.id/assets/css/all.css">
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LeEuTUqAAAAAA7DTOhIAzGkwdBRS6wGQOB2r1xV"></script> -->
+
+    <title>TrustPositif</title>
+    <style type="text/css">
+.update-terakhir {
+    background: #3f51b5!important;
+        border-radius: 10px;
+}
+.top-small-nav {
+    background: #2196F3!important;
+}
+.navbar1 {
+    background: #253c80!important;
+}
+.title-angka img {
+    background: #102d7c;
+}
+.jumlah-terakhir {
+    color: #c3c3c3;
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #3f51b5;
+    border-color: #3f51b5;
+}
+.overview {
+    color: #3f51b5;
+    background: #3f51b5 !important;
+        border-radius: 10px;
+}
+.coco-bg {
+    background: #3f51b5;
+}
+.text-tentang > h5 {
+    font-weight: 500;
+    color: var(--white);
+    padding-top: 12px;
+}
+footer .pd-top {
+    background: #253c7f;
+}
+footer .container-fluid {
+    border: 0px solid #eaedf5;
+}
+
+.modal-header {
+    background: #2196F3!important;
+}
+
+
+    </style>
+  </head>
+  <body>
+
+<div class="container-fluid">
+<div class="col-sm-12 top-small-nav"><img src="https://trustpositif.komdigi.go.id/assets/images/id.png" alt="trustpositif"> TRUST+™ Positif, Internet Sehat dan Aman</div>
+<nav class="navbar navbar-expand-lg navbar1">
+  <a class="navbar-brand" href="#" hidden="hidden">Trustpositif</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><img src="https://trustpositif.komdigi.go.id/assets/images/menu.png">  Menu</span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a id="beranda" class="nav-link" href="https://trustpositif.komdigi.go.id/">Beranda <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://aduankonten.id/" target="blank">Aduan Konten</a>
+      </li>
+      <li class="nav-item">
+        <a id="tentang" class="nav-link" href="https://trustpositif.komdigi.go.id/Tentang">Tentang Kami</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div><div class="container body images-index">
+    <div class="col-sm-12 text-center logo d-none d-sm-block">
+<img class="icon_kominfo img-fluid" src="https://trustpositif.komdigi.go.id/assets/images/komdigi.png" alt="trustpositif">
+	<img class="icon_ais img-fluid" src="https://trustpositif.komdigi.go.id/assets/images/cyberdrone.jpeg" alt="trustpositif">
+	<img class="icon_aduan img-fluid" src="https://trustpositif.komdigi.go.id/assets/images/aduan_.png" alt="trustpositif">
+   </div>
+
+ <div class="col-sm-12 text-center logo d-block d-sm-none ">
+<img class="icon_kominfo img-fluid" src="https://trustpositif.komdigi.go.id/assets/images/komdigi.png" alt="trustpositif" style="max-width: 57px;">
+	<img class="icon_ais img-fluid" src="https://trustpositif.komdigi.go.id/assets/images/cyberdrone.jpeg" alt="trustpositif" style="max-width: 110px;">
+	<img class="icon_aduan img-fluid" src="https://trustpositif.komdigi.go.id/assets/images/aduan_.png" alt="trustpositif" style="max-width: 72px;">
+   </div>
+ <div class=""></div>
+   <div class="col-sm-12 keterangan">
+     <p>Isilah Domain/URL/Keyword yang ingin Anda cari pada kolom isian di bawah, cukup 1 bagian kata saja, misalkan: ‘domainsaya.com’. Kemudian klik ‘CARI DATA’ untuk melakukan pencarian. Anda tidak perlu menyertakan ‘http://’ pada awal kata pencarian ataupun trailing slash ‘/’ pada akhir kata pencarian.</p>
+   </div>
+   <div class="col-sm-12 home-table">
+      <div class="input-group mb-3 input-group-lg">
+         <input type="text" class="form-control cari" placeholder="Cari Data Pemblokiran Trustpositif" id="press-to-modal" readonly="readonly">
+         <div class="input-group-append">
+         </div>
+      </div>
+      <div class="table-responsive">
+  <span style="display: none" id="show_loading">
+        <div class="d-flex justify-content-center" id="spinloading">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+         </div>
+      </span>
+      
+                   </table>
+ 
+      </div>
+      <p>
+        
+      </p>
+   </div>
+  <div class="row">
+  <div class="col-sm-12 container-button">
+    <a class="btn-info" href="https://trustpositif.komdigi.go.id/normalisasi" target="_blank">
+     <button type="button" class="btn btn-info" style="background-color:#86CC2D;border-color: #86CC2D;"> PENGAJUAN NORMALISASI</button>
+     </a>
+   </div>
+   <div class="col-sm-12 container-button">
+    <a class="btn-info" href="https://trustpositif.komdigi.go.id/pdfhoaks">
+     <button type="button" class="btn btn-info"> <img src="https://trustpositif.komdigi.go.id/assets/images/interface.png"> Download Data Hoaks Terbaru</button>
+     </a>
+   </div>
+   <div class="col-sm-12 container-button">
+      <a class="btn-info" href="https://trustpositif.komdigi.go.id/assets/db/domains">
+       <button type="button" class="btn btn-secondary">  <img src="https://trustpositif.komdigi.go.id/assets/images/data-transfer-download-3x.png"> Download Blacklist TrustPositif</button>
+       </a>
+   </div>
+      
+   <div class="col-sm-12 text-center logo d-sm-block no_koripsi">
+      <img class="icon_ais img-fluid" src="https://trustpositif.komdigi.go.id/assets/images/No-Korupsi-01.png" alt="trustpositif" style="max-width: 184px;">
+   </div>
+
+</div>
+</div>
+
+</div>
+ <style type="text/css">
+    #input-data {
+    height: 350px;
+    overflow-x: auto;
+}
+  </style>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal-search" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" id="text-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <p></p>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+         <div class="col-sm-12">
+         	<div id="caridata">
+           <form id="domain" method="GET" action="https://trustpositif.komdigi.go.id/welcome" >
+           <input type="hidden" name="csrf_token" value="a89a6fabc000209ade75bed8e1a968d0" style="display: none">
+           <input type="hidden" name="recaptcha_token" id="recaptchaToken">
+	         	<div class="form-group">
+				  <label for="comment"></label>
+				  <textarea  class="form-control inputarea" rows="5" id="input-data" placeholder="Contoh pencarian yang benar: namadomain.tld
+Contoh pencarian yang salah: subdomain.namadomain.tld atau subdomain.namadomain.tld
+Maksimal Pencarian 5 url
+          " name="domains"></textarea>
+				</div>
+
+			</div>
+			<div id="shadata">
+				<div class="form-group append" id="append">
+						
+					</div>
+			</div>
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" id="text-footer1"> Cari
+          </button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+<!--   <script>
+        document.getElementById('domain').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah pengiriman form otomatis
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LeEuTUqAAAAAA7DTOhIAzGkwdBRS6wGQOB2r1xV', {action: 'submit'}).then(function(token) {
+                    document.getElementById('recaptchaToken').value = token;
+                    document.getElementById('domain').submit();
+                });
+            });
+        });
+    </script> --> 
+<footer class="footer">
+ <div class="container">          
+<!-- Footer -->
+    
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+                    <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-5 mt-md-0 mt-3 sistem">
+                <div class="col-sm-12" style="margin-top:5%;">
+                <span class="d-none d-sm-block">
+                  <img src="https://trustpositif.komdigi.go.id/assets/images/white_komdigi.png"> <br>
+
+                </span>
+                <span class="d-block d-sm-none">
+                  <img src="https://trustpositif.komdigi.go.id/assets/images/white_komdigi.png">
+                  <br>
+                </span>
+              </div>
+
+              <!-- Content -->
+      <!--         <h5 class="text-uppercase">SISTEM ADUAN KONTEN</h5>
+                <p>Kami sangat mengundang Anda untuk berpartisipasi dalam pengembangan database <br>TRUST+™ Positif yang saat ini telah terkaji. Anda dapat berpartisipasi langsung dengan cara mengisi Formulir Pengaduan yang ada, atau dengan mengirimkan informasi ke: aduankonten@kominfo.go.id </p> -->
+            </div>
+            <!-- Grid column -->
+
+           
+
+            <!-- Grid column -->
+            <div class="col-md-2 mb-md-0 mb-3 link">
+
+              <!-- Links -->
+              <h5 class="text-uppercase" style="color:#ed8c2b !important">Links</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                 <a  href="index.php">Beranda <span class="sr-only">(current)</span></a>
+                </li>
+                <li>
+                  <a  href="https://aduankonten.id/" target="blank">Aduan Konten</a>
+                </li>
+                <li>
+                  <a href="tentang.php">Tentang Kami</a>
+                </li>
+              </ul>
+
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-md-4 mb-md-0 mb-3 kontak">
+
+              <!-- Links -->
+              <h5 class="text-uppercase" style="color: #ed8c2b !important">Kontak</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  Telepon: +62 21 3845786
+                </li>
+                <li>
+                   <a href="mailto:aduankonten@komdigi.go.id">Email: aduankonten@komdigi.go.id </a>
+                </li>
+                <li>
+                  Jalan Medan Merdeka Barat No.9 Jakarta Pusat
+                </li>
+              </ul>
+
+            </div>
+    
+
+          </div>
+          <!-- Grid row -->
+
+
+        </div>
+        <!-- Copyright -->
+      </div>
+    </footer>
+
+<!-- Footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://trustpositif.komdigi.go.id/assets/js/jquery.min.js"></script>   
+    <script src="https://trustpositif.komdigi.go.id/assets/js/bootstrap.min.js"></script>
+    <script src="https://trustpositif.komdigi.go.id/assets/js/jquery.dataTables.min.js"></script>
+    <script src="https://trustpositif.komdigi.go.id/assets/js/dataTables.bootstrap4.min.js"></script>
+  </body>
+</html>
+<script type="text/javascript">
+var urls = "https://trustpositif.komdigi.go.id/";
+var base_url = window.location.origin
+$(document).ready(function(){
+       $.ajax({
+              method:'GET',
+              type:'ajax',
+              url:base_url + '/Rest_server/gettotalrecordsperkategori',
+              dataType:'json',
+              success: function(data){
+                var obj = data;
+                console.log(obj);
+                var objPornografi = obj[0].TotalPornografi;
+                var objRadikalisme = obj[0].TotalRadikalisme;
+                var objSarah = obj[0].TotalSARA;
+                var objKekerasan = obj[0].TotalKekerasan;
+                var objPornoanak = obj[0].TotalKekerasanPornografiAnak;
+                var objPerjudian = obj[0].TotalPerjudian;
+                var objNormalisasi = obj[0].TotalRadikalisme;
+                var objTotalInvestasiIlegal = obj[0].TotalInvestasiIlegal;
+                var objTotalFitnah = obj[0].TotalFitnah;
+                var objTotalPenipuanOnline = obj[0].TotalPenipuanOnline;
+                var objTotalHKI = obj[0].TotalHKI;
+                var objTotalPelanggaranKeamananInformasi = obj[0].TotalPelanggaranKeamananInformasi;
+                var objTotalPelanggaranUUITE = obj[0].TotalPelanggaranUUITE;
+                var objTotalPerdaganganProdukAturanKhusus = obj[0].TotalPerdaganganProdukAturanKhusus;
+                var objInstansiSektor = obj[0].TotalKontenNegatifDirekomendasikanInstansiSektor;
+                var objTotalKontenMeresahkanMasyarakat = obj[0].TotalKontenMeresahkanMasyarakat;
+                var objTotalSeparatisme = obj[0].TotalSeparatisme;
+                var objLastDate = obj[0].lastdate;
+                var objmelanggar_nilai_sosia = obj[0].TotalKontenMelanggarNilaiSosialBudaya;
+                var objTotalHOAKS= obj[0].TotalHOAKS;
+                var objTotalPemerasan= obj[0].TotalPemerasan;
+                var objTotalKontenMemfasilitasiKontenNegatif= obj[0].TotalKontenMemfasilitasiKontenNegatif;
+                
+                // html 
+                $('#pornografi').text(objPornografi);
+                $('#radikal').text(objRadikalisme);
+                $('#sarah').text(objSarah);
+                $('#kekerasan').text(objKekerasan);
+                $('#porn_anak').text(objPornoanak);
+                $('#perjudian').text(objPerjudian);
+                $('#normalisasi').text(objNormalisasi);
+                $('#investasi').text(objTotalInvestasiIlegal);
+                $('#fitnah').text(objTotalFitnah);
+                $('#penipuan_online').text(objTotalPenipuanOnline);
+                $('#hki').text(objTotalHKI);
+                $('#keamanan_informasi').text(objTotalPelanggaranKeamananInformasi);
+                $('#uu_ite').text(objTotalPelanggaranUUITE);
+                $('#produk_aturan_khusus').text(objTotalPerdaganganProdukAturanKhusus);
+                $('#instansi_sektor').text(objInstansiSektor);
+                $('#meresahkan_masyarakat').text(objTotalKontenMeresahkanMasyarakat);
+                $('#organisasi_berbahaya').text(objTotalSeparatisme);
+                $('#lastupdate').text(objLastDate);
+                $('#melanggar_nilai_sosial').text(objmelanggar_nilai_sosia);
+                $('#total_hoaks').text(objTotalHOAKS);
+                $('#total_pemerasan').text(objTotalPemerasan);
+                $('#konten_memfasilitasi_konten_negatif').text(objTotalKontenMemfasilitasiKontenNegatif);
+
+                
+
+              },
+              error: function(){
+                console.log('Error');
+              }
+          });
+    });
+
+  $('#text-footer').on('click', function(){
+    $('#daftar-block').show();
+     $('#show_loading').show();
+    var txt = $.trim($("#input-data").val());
+    var passhtml = '';
+      $.ajax({
+              method:'POST',
+              type:'ajax',
+              dataType: 'json',
+              url:base_url + '/Rest_server/getrecordsname_home',
+              data:{ 'csrf_token': 'a89a6fabc000209ade75bed8e1a968d0', name : txt},
+              success: function(data){
+          var resultdata = data.values;
+          var passdata = resultdata[0].Domain;
+         for(i=0; i < resultdata.length; i++){
+            console.log(resultdata[i].Domain);
+            console.log(resultdata[i].Status);
+             $('#show_loading').hide();
+            passhtml +=  '<tr>'+
+                             // '<td>'+(i+1)+'</td>'+
+                             '<td>'+resultdata[i].Domain+'</td>'+
+                             '<td>'+resultdata[i].Status+'</td>'+
+                           '</tr>' ;
+                }
+                $('#show-result').html(passhtml);
+              },
+              error: function(){
+                console.log('Error');
+              }
+          });
+  });
+  $('.inputarea').on('change paste keyup', function(e){
+    var t = $.trim($("#input-data").val()); 
+    var lines = t.split(/\r|\r\n|\n/);
+    var lengtrow = lines.length;
+      if (lengtrow >= 6 ) {
+          alert("limit 5 Row");
+          $('.inputarea').val('');
+      }
+  });
+  
+$('#btn-tampil').on('click', function(){
+    $('#show-all-category').toggle('show');
+    $(this).hide('slow');
+    $('#btn-hide').show('slow');
+});
+$('#btn-hide').on('click', function(){
+    $(this).hide();
+    $('#show-all-category').hide('slow');
+    $('#btn-tampil').show('slow');
+});
+</script>
+
+<script type="text/javascript">
+ $('#press-to-modal, #press-cari').on("click", function(){
+     $('#input-data').val('').empty().focus();
+     $('#myModal-search').modal("show");
+     $('#text-title').text('CARI DATA');
+     $('#text-footer').text('CARI DATA');
+});
+
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $("#beranda").css('text-decoration', "underline");
+  });
+
+$(document).ready(function(){
+    $("#myModal-search").on('shown.bs.modal', function(){
+        $(this).find('#input-data').focus();
+    });
+});
+
+</script>
+

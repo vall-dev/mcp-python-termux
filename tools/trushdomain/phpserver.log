@@ -1,0 +1,103 @@
+[Wed Aug 26 18:13:10 2026] PHP 8.5.1 Development Server (http://127.0.0.1:8008) started
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38946 Accepted
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38946 [200]: GET /index.php
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38946 Closing
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38956 Accepted
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38956 [200]: GET /stats.php
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38956 Closing
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38972 Accepted
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38972 [200]: GET /history.php
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38972 Closing
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38988 Accepted
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38988 [200]: GET /check.php
+[Wed Aug 26 18:13:19 2026] 127.0.0.1:38988 Closing
+[Wed Aug 26 18:13:20 2026] 127.0.0.1:39002 Accepted
+[Wed Aug 26 18:13:20 2026] 127.0.0.1:39002 [200]: POST /check.php
+[Wed Aug 26 18:13:20 2026] 127.0.0.1:39002 Closing
+[Wed Aug 26 18:13:24 2026] 127.0.0.1:39010 Accepted
+[Wed Aug 26 18:13:24 2026] 127.0.0.1:39010 [200]: GET /export_history.php
+[Wed Aug 26 18:13:24 2026] 127.0.0.1:39010 Closing
+[Wed Aug 26 18:13:35 2026] 127.0.0.1:47036 Accepted
+[Wed Aug 26 18:13:35 2026] 127.0.0.1:47036 [200]: GET /export_history.php
+[Wed Aug 26 18:13:35 2026] 127.0.0.1:47036 Closing
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44156 Accepted
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44156 [200]: GET /index.php
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44156 Closing
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44164 Accepted
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44164 [200]: GET /stats.php
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44164 Closing
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44180 Accepted
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44180 [200]: GET /history.php
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44180 Closing
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44182 Accepted
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44182 [200]: POST /check.php
+[Wed Aug 26 18:13:45 2026] 127.0.0.1:44182 Closing
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44930 Accepted
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44930 [200]: GET /
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44930 Closing
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44936 Accepted
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44942 Accepted
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44936 [200]: GET /assets/css/style.css
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44936 Closing
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44942 [200]: GET /assets/js/app.js
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44942 Closing
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44958 Accepted
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44958 [200]: GET /favicon.ico
+[Wed Aug 26 18:14:08 2026] 127.0.0.1:44958 Closing
+[Wed Aug 26 18:14:18 2026] 127.0.0.1:40608 Accepted
+[Wed Aug 26 18:14:19 2026] 127.0.0.1:40608 [200]: POST /check.php
+[Wed Aug 26 18:14:19 2026] 127.0.0.1:40608 Closing
+[Wed Aug 26 18:14:26 2026] 127.0.0.1:40586 Accepted
+[Wed Aug 26 18:14:27 2026] 127.0.0.1:40586 [200]: POST /check.php
+[Wed Aug 26 18:14:27 2026] 127.0.0.1:40586 Closing
+[Wed Aug 26 18:14:32 2026] 127.0.0.1:40596 Accepted
+[Wed Aug 26 18:14:32 2026] 127.0.0.1:40596 [200]: POST /check.php
+[Wed Aug 26 18:14:32 2026] 127.0.0.1:40596 Closing
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43820 Accepted
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43820 [200]: GET /stats.php
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43820 Closing
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43836 Accepted
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43840 Accepted
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43836 [200]: GET /assets/css/style.css
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43836 Closing
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43840 [200]: GET /assets/js/app.js
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43840 Closing
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43842 Accepted
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43842 [200]: GET /favicon.ico
+[Wed Aug 26 18:14:37 2026] 127.0.0.1:43842 Closing
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43858 Accepted
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43858 [200]: GET /history.php
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43858 Closing
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43862 Accepted
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43868 Accepted
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43862 [200]: GET /assets/css/style.css
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43862 Closing
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43868 [200]: GET /assets/js/app.js
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43868 Closing
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43872 Accepted
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43872 [200]: GET /favicon.ico
+[Wed Aug 26 18:14:44 2026] 127.0.0.1:43872 Closing
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37318 Accepted
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37318 [200]: GET /index.php
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37318 Closing
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37322 Accepted
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37336 Accepted
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37322 [200]: GET /assets/css/style.css
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37322 Closing
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37336 [200]: GET /assets/js/app.js
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37336 Closing
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37344 Accepted
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37344 [200]: GET /favicon.ico
+[Wed Aug 26 18:14:51 2026] 127.0.0.1:37344 Closing
+[Wed Aug 26 18:14:52 2026] 127.0.0.1:37348 Accepted
+[Wed Aug 26 18:14:52 2026] 127.0.0.1:37348 [200]: GET /history.php
+[Wed Aug 26 18:14:52 2026] 127.0.0.1:37348 Closing
+[Wed Aug 26 18:14:52 2026] 127.0.0.1:37364 Accepted
+[Wed Aug 26 18:14:52 2026] 127.0.0.1:37364 [200]: GET /assets/css/style.css
+[Wed Aug 26 18:14:52 2026] 127.0.0.1:37364 Closing
+[Wed Aug 26 18:14:52 2026] 127.0.0.1:37374 Accepted
+[Wed Aug 26 18:14:52 2026] 127.0.0.1:37374 [200]: GET /assets/js/app.js
+[Wed Aug 26 18:14:52 2026] 127.0.0.1:37374 Closing
+[Wed Aug 26 18:14:53 2026] 127.0.0.1:37378 Accepted
+[Wed Aug 26 18:14:53 2026] 127.0.0.1:37378 [200]: GET /favicon.ico
+[Wed Aug 26 18:14:53 2026] 127.0.0.1:37378 Closing

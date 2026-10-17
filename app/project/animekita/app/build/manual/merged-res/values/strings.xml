@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ANIMEKITA</string>
+    <string name="app_tagline">Stream Anime Sub Indo</string>
+    <string name="hello_world">Hello, World!</string>
+    <string name="tab_ongoing">Ongoing</string>
+    <string name="tab_completed">Completed</string>
+    <string name="tab_all">All Anime</string>
+    <string name="search_hint">Search anime...</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="loading">Loading...</string>
+    <string name="error_load">Failed to load data</string>
+    <string name="episodes">Episodes</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="genre">Genre</string>
+    <string name="status_anime">Status</string>
+    <string name="rating">Rating</string>
+    <string name="play">Play</string>
+    <string name="back">Back</string>
+    <string name="fullscreen">Fullscreen</string>
+    <string name="retry">Retry</string>
+    <string name="notification_channel_name">Notifikasi Anime</string>
+    <string name="notification_channel_desc">Notifikasi anime terbaru dan update dari ANIMEKITA</string>
+    <string name="thanks_title">Terima kasih!</string>
+    <string name="thanks_text">Terimakasih sudah subscribe apk ini</string>
+    <string name="push_default_body">Anime terbaru sudah rilis!</string>
+</resources>

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "server": {
+    "name": "TermuxMCP",
+    "log_level": "info"
+  },
+  "paths": {
+    "home": "~/",
+    "allow_dirs": "all",
+    "work_dir": "~/",
+    "extra_work_dirs": [
+      "~/mcp/*"
+    ]
+  },
+  "commands": {
+    "s_home": {
+      "enabled": true,
+      "persist": true,
+      "default": "~/",
+      "description": "Set direktori utama untuk operasi file (bukan home Termux)."
+    },
+    "allow_dir": {
+      "enabled": true,
+      "persist": true,
+      "default": "all",
+      "separator": "&",
+      "description": "Direktori yang diizinkan edit/hapus/tulis/lihat/cari. all atau * = semua (termasuk storage/emulated/0/). Contoh: ~/mcp/ & ~/storage/emulated/0/"
+    },
+    "s_dir": {
+      "enabled": true,
+      "persist": true,
+      "default": "default",
+      "description": "Set direktori kerja shell. default = direktori bawaan Termux."
+    },
+    "set": {
+      "enabled": true,
+      "persist": true,
+      "default": "~/mcp/*",
+      "description": "Tambah/set direktori kerja aktif. ~/mcp/* = ikut lokasi script main.py berjalan."
+    }
+  },
+  "agent_policy": {
+    "mode": "auto",
+    "plan": "auto",
+    "auto_accept": true,
+    "text_only": "auto",
+    "default_choice": "auto",
+    "allow_agent_change_config": true,
+    "confirm_before_write": false,
+    "confirm_before_edit": false,
+    "confirm_before_delete": false,
+    "confirm_before_execute": false,
+    "confirm_before_read": false
+  },
+  "tools": {
+    "cmd": {
+      "enabled": true,
+      "default_timeout": 60,
+      "max_timeout": 86400,
+      "shell": "bash"
+    },
+    "edit": {
+      "enabled": true,
+      "default_mode": "overwrite"
+    },
+    "tulis": {
+      "enabled": true
+    },
+    "lihat": {
+      "enabled": true,
+      "default_limit": 500
+    },
+    "cari": {
+      "enabled": true
+    },
+    "hapus": {
+      "enabled": true,
+      "confirm": false
+    }
+  },
+  "hot_reload": {
+    "enabled": true,
+    "interval_seconds": 2
+  }
+}

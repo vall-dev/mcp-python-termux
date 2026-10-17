@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "501409243568",
+    "project_id": "animekita-9071f",
+    "storage_bucket": "animekita-9071f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501409243568:android:d351c166346d9865bff675",
+        "android_client_info": {
+          "package_name": "com.animekita"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNMK10XmNFxfyb0Jf2eu0Bc38NlgIrSgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Timemark Camera - Foto & Video dengan Watermark Lokasi Dinamis</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- FontAwesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style_v66.css?v=66">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Camera Viewport -->
+        <main class="camera-viewport">
+            <video id="camera-stream" autoplay playsinline muted></video>
+            
+            <!-- Uploaded Photo/Video Viewport (Hidden by default) -->
+            <div id="upload-preview-container" class="upload-preview-container" style="display: none;">
+                <img id="upload-preview-img" src="" alt="Unggahan Foto">
+                <video id="upload-preview-video" src="" loop muted playsinline style="display: none;"></video>
+            </div>
+
+            <canvas id="camera-grid" class="camera-overlay-grid"></canvas>
+            
+            <!-- Dynamic Watermark Visual Overlay (Mirrors the captured result) -->
+            <div id="watermark-overlay" class="watermark-overlay-container">
+                <!-- Top Left: Map Inset -->
+                <div class="watermark-map-inset" id="watermark-map-container">
+                    <canvas id="watermark-map-canvas" width="120" height="120"></canvas>
+                </div>
+
+                <!-- Top Right: Logo -->
+                <div class="watermark-logo-container">
+                    <img src="logo.svg?v=12" class="logo-svg-img" alt="Timemark Logo">
+                </div>
+
+                <!-- Bottom Left: Metadata -->
+                <div class="watermark-metadata-container">
+                    <div class="time-date-row">
+                        <span class="time-text" id="wm-time">13:34</span>
+                        <div class="time-divider"></div>
+                        <div class="date-col">
+                            <span class="date-text" id="wm-date">14 Juli 2026</span>
+                            <span class="day-text" id="wm-day">Selasa</span>
+                        </div>
+                    </div>
+                    <div class="location-address" id="wm-address">Sedang mengambil lokasi...</div>
+                    <div class="weather-coords-container">
+                        <div class="weather-info" id="wm-weather">Cuaca: Mendapatkan cuaca...</div>
+                        <div class="coordinates-info" id="wm-coords">Koordinat: Mencari GPS...</div>
+                    </div>
+                    <div class="photo-code-row">
+                        <svg class="photo-code-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.25,7.4a43.79,43.79,0,0,1-6.62-2.35,45,45,0,0,1-6.08-3.21L18,1.5l-.54.35a45,45,0,0,1-6.08,3.21A43.79,43.79,0,0,1,4.75,7.4L4,7.59v8.34c0,13.39,13.53,18.4,13.66,18.45l.34.12.34-.12c.14,0,13.66-5.05,13.66-18.45V7.59ZM30,15.93c0,11-10,15.61-12,16.43-2-.82-12-5.44-12-16.43V9.14a47.54,47.54,0,0,0,6.18-2.25,48.23,48.23,0,0,0,5.82-3,48.23,48.23,0,0,0,5.82,3A47.54,47.54,0,0,0,30,9.14Z"></path>
+                            <path d="M10.88,16.87a1,1,0,0,0-1.41,1.41l6,6L26.4,13.77A1,1,0,0,0,25,12.33l-9.47,9.19Z"></path>
+                        </svg>
+                        <span>Kode Foto: <strong id="wm-photo-code">GENERATING</strong></span>
+                    </div>
+                </div>
+
+                <!-- Right Side: Vertical Text Watermark -->
+                <div class="watermark-vertical-container">
+                    <span class="vertical-text">
+                        <svg class="vertical-shield-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.25,7.4a43.79,43.79,0,0,1-6.62-2.35,45,45,0,0,1-6.08-3.21L18,1.5l-.54.35a45,45,0,0,1-6.08,3.21A43.79,43.79,0,0,1,4.75,7.4L4,7.59v8.34c0,13.39,13.53,18.4,13.66,18.45l.34.12.34-.12c.14,0,13.66-5.05,13.66-18.45V7.59ZM30,15.93c0,11-10,15.61-12,16.43-2-.82-12-5.44-12-16.43V9.14a47.54,47.54,0,0,0,6.18-2.25,48.23,48.23,0,0,0,5.82-3,48.23,48.23,0,0,0,5.82,3A47.54,47.54,0,0,0,30,9.14Z"></path>
+                            <path d="M10.88,16.87a1,1,0,0,0-1.41,1.41l6,6L26.4,13.77A1,1,0,0,0,25,12.33l-9.47,9.19Z"></path>
+                        </svg>
+                        <span id="wm-vertical-code">GENERATING</span><span class="verified-label">Timemark Verified</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Toast Notifications -->
+            <div id="toast-notification" class="toast-notification">Pesan notifikasi</div>
+            
+            <!-- Live Recording Indicator -->
+            <div id="recording-indicator" class="recording-indicator">
+                <span class="rec-dot"></span>
+                <span class="rec-timer" id="recording-timer">00:00</span>
+            </div>
+            
+            <!-- Exit Upload Mode Button (Hidden by default) -->
+            <button id="btn-exit-upload" class="exit-upload-btn" style="display: none;">
+                <i class="fa-solid fa-camera"></i> Kembali ke Kamera
+            </button>
+        </main>
+
+        <!-- Bottom UI Panel -->
+        <footer class="controls-panel">
+            <!-- Left Group: Gallery & Upload -->
+            <div class="controls-left-group">
+                <button id="btn-gallery-toggle" class="control-btn-sub" title="Galeri Foto">
+                    <div class="gallery-preview-thumbnail" id="gallery-preview-thumb">
+                        <i class="fa-solid fa-images"></i>
+                    </div>
+                    <span>Galeri</span>
+                </button>
+                <button id="btn-upload-trigger" class="control-btn-sub" title="Unggah Foto dari Galeri">
+                    <div class="upload-icon-wrapper">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <span>Unggah</span>
+                </button>
+                <input type="file" id="input-file-upload" accept="image/*, video/*" style="display: none;">
+            </div>
+
+            <!-- Center Controls: Mode & Shutter -->
+            <div class="shutter-controls">
+                <div class="mode-selector">
+                    <button id="mode-photo" class="mode-btn active">FOTO</button>
+                    <button id="mode-video" class="mode-btn">VIDEO</button>
+                </div>
+                
+                <div class="shutter-wrapper">
+                    <button id="btn-shutter" class="btn-shutter photo-mode-shutter" title="Ambil Foto"></button>
+                </div>
+            </div>
+
+            <!-- Right Group: Switch Camera & Settings -->
+            <div class="controls-right-group">
+                <button id="btn-camera-switch" class="control-btn-sub" title="Alihkan Kamera">
+                    <i class="fa-solid fa-camera-rotate"></i>
+                    <span>Kamera</span>
+                </button>
+                <button id="btn-settings-toggle" class="control-btn-sub" title="Pengaturan">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Setelan</span>
+                </button>
+            </div>
+        </footer>
+
+        <!-- Settings & Customization Panel (Slide-up Modal) -->
+        <div id="settings-panel" class="modal-overlay">
+            <div class="modal-content glass-effect">
+                <div class="modal-header">
+                    <h3>Pengaturan & Atribut</h3>
+                    <button id="btn-close-settings" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Camera Switcher -->
+                    <div class="settings-group">
+                        <label for="camera-select"><i class="fa-solid fa-camera"></i> Pilih Kamera</label>
+                        <select id="camera-select" class="form-control"></select>
+                    </div>
+
+                    <!-- Manual Time Settings -->
+                    <div class="settings-group">
+                        <div class="group-header">
+                            <label><i class="fa-solid fa-clock"></i> Pengaturan Waktu</label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="toggle-auto-time" checked>
+                                <span class="checkmark"></span> Waktu Otomatis
+                            </label>
+                        </div>
+                        
+                        <div id="manual-time-inputs" class="form-row" style="display: none; margin-top: 8px;">
+                            <div class="form-col">
+                                <label for="input-manual-date">Tanggal Kustom</label>
+                                <input type="date" id="input-manual-date" class="form-control">
+                            </div>
+                            <div class="form-col">
+                                <label for="input-manual-time">Jam Kustom</label>
+                                <input type="time" id="input-manual-time" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Watermark Options -->
+                    <div class="settings-group">
+                        <label><i class="fa-solid fa-toggle-on"></i> Tampilan Watermark</label>
+                        <div class="checkbox-row">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="toggle-map" checked>
+                                <span class="checkmark"></span> Peta Inset
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="toggle-grid">
+                                <span class="checkmark"></span> Garis Grid Kamera
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Manual Location Attributes (Fallback / Customization) -->
+                    <div class="settings-group">
+                        <div class="group-header">
+                            <label><i class="fa-solid fa-location-dot"></i> Kustomisasi Data GPS & Cuaca</label>
+                            <button id="btn-refresh-gps" class="btn-text" title="Segarkan GPS"><i class="fa-solid fa-rotate"></i> Segarkan GPS</button>
+                        </div>
+                        
+                        <div class="form-group-single">
+                            <label class="switch-container">
+                                <input type="checkbox" id="toggle-auto-gps" checked>
+                                <span class="slider"></span> GPS Otomatis (Lokasi Live)
+                            </label>
+                        </div>
+                        
+                        <div class="form-group-single">
+                            <label for="input-coords-val"><i class="fa-solid fa-compass"></i> Koordinat (Lat, Lon)</label>
+                            <input type="text" id="input-coords-val" class="form-control" placeholder="-6.894546, 110.634553">
+                        </div>
+
+                        <div class="form-group-single" id="nearby-addresses-group" style="display: none;">
+                            <label for="nearby-addresses-select"><i class="fa-solid fa-map-location-dot"></i> Pilihan Alamat Sekitar</label>
+                            <select id="nearby-addresses-select" class="form-control">
+                                <!-- Pilihan alamat sekitar akan dimasukkan secara dinamis -->
+                            </select>
+                        </div>
+
+                        <div class="form-group-single">
+                            <label for="address-type-select">Format Alamat Otomatis</label>
+                            <select id="address-type-select" class="form-control">
+                                <option value="concise">Ringkas (Kecamatan, Kabupaten)</option>
+                                <option value="complete">Lengkap (Jalan, RT/RW, Kelurahan, Kecamatan, dll)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-single">
+                            <label for="input-address">Alamat Kustom</label>
+                            <textarea id="input-address" class="form-control" rows="2" placeholder="Kabupaten Demak, Jawa Tengah"></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="input-weather-desc">Cuaca</label>
+                                <input type="text" id="input-weather-desc" class="form-control" placeholder="Berawan">
+                            </div>
+                            <div class="form-col">
+                                <label for="input-temp">Suhu (°C)</label>
+                                <input type="number" id="input-temp" class="form-control" placeholder="27">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group-single">
+                            <label for="input-photo-code">Kode Foto</label>
+                            <div class="input-with-button">
+                                <input type="text" id="input-photo-code" class="form-control" placeholder="RKDT1L26GNWHXW">
+                                <button id="btn-regenerate-code" class="btn-action-sm"><i class="fa-solid fa-wand-magic-sparkles"></i> Acak</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Drawer (Slide-up Modal) -->
+        <div id="gallery-panel" class="modal-overlay">
+            <div class="modal-content glass-effect full-height">
+                <div class="modal-header">
+                    <h3>Galeri Timemark</h3>
+                    <button id="btn-close-gallery" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal-body gallery-grid-container">
+                    <!-- Media Items will be injected here -->
+                    <div id="gallery-empty-state" class="gallery-empty">
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <p>Belum ada foto atau video yang diambil.</p>
+                    </div>
+                    <div id="gallery-items-grid" class="gallery-grid"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox for Full-screen media preview -->
+        <div id="lightbox" class="lightbox-overlay">
+            <button id="btn-close-lightbox" class="lightbox-btn-close"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="lightbox-content-container">
+                <div id="lightbox-media-wrapper">
+                    <!-- Image or Video Element will be injected here -->
+                </div>
+            </div>
+
+            <!-- Lightbox Actions Footer -->
+            <div class="lightbox-footer">
+                <div class="lightbox-metadata">
+                    <span id="lightbox-date">Tanggal</span>
+                    <span id="lightbox-code">Kode Foto</span>
+                </div>
+                <div class="lightbox-actions">
+                    <button id="btn-lightbox-share" class="lightbox-btn share-btn"><i class="fa-solid fa-share-nodes"></i> Bagikan</button>
+                    <button id="btn-lightbox-download" class="lightbox-btn download-btn"><i class="fa-solid fa-download"></i> Unduh</button>
+                    <button id="btn-lightbox-delete" class="lightbox-btn delete-btn"><i class="fa-solid fa-trash-can"></i> Hapus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Canvas for high-res photo watermarking and video frames recording (hidden off-screen to preserve web font rendering) -->
+    <canvas id="hidden-capture-canvas" style="position: absolute; left: -9999px; top: -9999px; visibility: hidden; pointer-events: none;"></canvas>
+    <!-- Hidden Map Canvas for pre-rendering OSM tiles (hidden off-screen to preserve web font rendering) -->
+    <canvas id="hidden-map-canvas" style="position: absolute; left: -9999px; top: -9999px; visibility: hidden; pointer-events: none;"></canvas>
+
+    <script src="app_v66.js?v=66"></script>
+</body>
+</html>

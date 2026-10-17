@@ -1,0 +1,4 @@
+Warning in /data/data/com.termux/files/home/apk/codeassist/.platform/caches/resolved-deps/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.6.4/kotlinx-coroutines-core-jvm-1.6.4.jar:kotlinx/coroutines/debug/AgentPremain.class:
+Type `sun.misc.SignalHandler` was not found, it is required for default or static interface methods desugaring of `kotlinx.coroutines.debug.AgentPremain$$InternalSyntheticLambda$2$677acd6fb4ca1651eb1c76ebe61d8c1a9f5aeadf35534bff63c38388e03cb9a0$0`
+Warning in /data/data/com.termux/files/home/apk/codeassist/.platform/caches/resolved-deps/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.6.4/kotlinx-coroutines-core-jvm-1.6.4.jar:kotlinx/coroutines/debug/AgentPremain$DebugProbesTransformer.class:
+Type `java.lang.instrument.ClassFileTransformer` was not found, it is required for default or static interface methods desugaring of `kotlinx.coroutines.debug.AgentPremain$DebugProbesTransformer`

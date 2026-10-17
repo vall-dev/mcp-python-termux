@@ -1,0 +1,14 @@
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/adapter/AnimeAdapter.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/adapter/EpisodeAdapter.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/model/Anime.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/model/HomeResponse.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/model/Episode.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/network/ApiClient.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/network/Scraper.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/AnimeFirebaseMessagingService.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/DetailActivity.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/MainActivity.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/NotificationHelper.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/PlayerActivity.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/SearchActivity.java
+/data/data/com.termux/files/home/apk/codeassist/projects/project-2/app/src/main/java/com/animekita/SubscriberManager.java
